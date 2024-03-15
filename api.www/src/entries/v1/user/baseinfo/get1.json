@@ -1,0 +1,220 @@
+[
+    {
+        "name": "avatar",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "id": 1,
+                "url": "/static/images/user/photo1.jpg",
+                "check": 0
+            },
+            {
+                "id": 2,
+                "url": "/static/images/user/photo2.jpg",
+                "check": 0
+            },
+            {
+                "id": 3,
+                "url": "/static/images/user/photo3.jpg",
+                "check": 0
+            },
+            {
+                "id": 4,
+                "url": "/static/images/user/photo4.jpg",
+                "check": 0
+            }
+        ]
+    },
+    {
+        "name": "name",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "value": ""
+    },
+    {
+        "name": "user_name",
+        "show": 1,
+        "required": 1,
+        "edit": 0,
+        "value": "XLZ12345"
+    },
+    {
+        "name": "gender",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "value": "1",
+                "parent": "0",
+                "name": "男"
+            },
+            {
+                "value": "2",
+                "parent": "0",
+                "name": "女"
+            },
+            {
+                "value": "3",
+                "parent": "0",
+                "name": "保密"
+            }
+        ],
+        "value": "1"
+    },
+    {
+        "name": "city",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "value": "1",
+                "parent": "0",
+                "name": "中国"
+            },
+            {
+                "value": "2",
+                "parent": "0",
+                "name": "日本"
+            },
+            {
+                "value": "11",
+                "parent": "1",
+                "name": "北京"
+            },
+            {
+                "value": "21",
+                "parent": "11",
+                "name": "朝阳区"
+            },
+            {
+                "value": "22",
+                "parent": "11",
+                "name": "东城区"
+            }
+        ],
+        "value": "22"
+    },
+    {
+        "name": "address",
+        "show": 1,
+        "required": 0,
+        "edit": 1,
+        "value": ""
+    },
+    {
+        "name": "nationality",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "value": "1",
+                "parent": "0",
+                "name": "中国"
+            },
+            {
+                "value": "2",
+                "parent": "0",
+                "name": "日本"
+            }
+        ],
+        "value": "1"
+    },
+    {
+        "name": "birth_place",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "value": "1",
+                "parent": "0",
+                "name": "中国"
+            },
+            {
+                "value": "2",
+                "parent": "0",
+                "name": "日本"
+            }
+        ],
+        "value": "1"
+    },
+    {
+        "name": "currency",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "value": "1",
+                "parent": "0",
+                "name": "人民币"
+            },
+            {
+                "value": "2",
+                "parent": "0",
+                "name": "美元"
+            }
+        ],
+        "value": "1"
+    },
+    {
+        "name": "first_account",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "info": [
+            {
+                "value": "1",
+                "parent": "0",
+                "name": "主钱包"
+            },
+            {
+                "value": "2",
+                "parent": "0",
+                "name": "子钱包"
+            }
+        ],
+        "value": "1"
+    },
+    {
+        "name": "qq",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "value": "88888999"
+    },
+    {
+        "name": "wechat",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "value": "1234567"
+    },
+    {
+        "name": "skype",
+        "show": 1,
+        "required": 1,
+        "edit": 1,
+        "value": "1234567"
+    },
+    {
+        "name": "nickname",
+        "show": 1,
+        "required": 0,
+        "edit": 0,
+        "value": ""
+    },
+    {
+        "name": "birth",
+        "show": 1,
+        "required": 0,
+        "edit": 0,
+        "value": ""
+    }
+]

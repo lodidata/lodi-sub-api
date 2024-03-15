@@ -1,0 +1,111 @@
+ALTER TABLE `agent_plat_earnlose`
+ADD COLUMN `status` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0：未结算，1：已结算' AFTER `manual_ratio_amount`;
+
+ALTER TABLE `agent_loseearn_bkge`
+ADD COLUMN `type` tinyint(1) UNSIGNED NOT NULL DEFAULT 1 COMMENT '结算方式 1：日返，2：周返，3：月返' AFTER `status`;
+
+CREATE TABLE `agent_plat_month_earnlose`  (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `date` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT '统计月份',
+  `proportion` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '总占成',
+  `bet_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '投注额',
+  `bet_amount_list` json NOT NULL COMMENT '游戏投注列表',
+  `lose_earn_list` json NOT NULL COMMENT '游戏盈亏列表',
+  `prize_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '派奖金额',
+  `lose_earn` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '盈亏',
+  `fee_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '总扣款(总成本)',
+  `revenue_amount` decimal(18, 2) NOT NULL COMMENT '总营收（总充值-总取款）',
+  `loseearn_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '盈亏占比金额',
+  `withdrawal_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '取款占比金额',
+  `deposit_ratio_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '充值占比金额',
+  `revenue_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '营收占比金额（输赢）',
+  `coupon_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '优惠占比金额',
+  `manual_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '人口扣款占比金额',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `udx_date`(`date`) USING BTREE
+) ENGINE = InnoDB   COMMENT = '代理盈亏返佣平台  月数据统计' ROW_FORMAT = DYNAMIC;
+
+CREATE TABLE `agent_plat_week_earnlose`  (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL DEFAULT '0000-00-00' COMMENT '统计日期 (统计周的最后一天)',
+  `proportion` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '总占成',
+  `bet_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '投注额',
+  `bet_amount_list` json NOT NULL COMMENT '游戏投注列表',
+  `lose_earn_list` json NOT NULL COMMENT '游戏盈亏列表',
+  `prize_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '派奖金额',
+  `lose_earn` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '盈亏',
+  `fee_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '总扣款(总成本)',
+  `revenue_amount` decimal(18, 2) NOT NULL COMMENT '总营收（总充值-总取款）',
+  `loseearn_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '盈亏占比金额',
+  `withdrawal_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '取款占比金额',
+  `deposit_ratio_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '充值占比金额',
+  `revenue_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '营收占比金额（输赢）',
+  `coupon_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '优惠占比金额',
+  `manual_ratio_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '人口扣款占比金额',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `udx_date`(`date`) USING BTREE
+) ENGINE = InnoDB   COMMENT = '代理盈亏返佣平台 周数据统计' ROW_FORMAT = DYNAMIC;
+
+CREATE TABLE `agent_loseearn_month_bkge`  (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `deal_log_no` bigint(20) UNSIGNED NOT NULL DEFAULT 0 COMMENT '交易流水号(funds_deal_log里的order_number)',
+  `date` varchar(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '日期(格式 2022-03)',
+  `user_id` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户id',
+  `user_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '用户名称',
+  `agent_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '上级代理名称',
+  `agent_cnt` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '下级代理人数(与rpt_agent里的一样)',
+  `num` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '注单数目',
+  `active_user_num` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '下级活跃用户数(有充值和投注)',
+  `bkge` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '返佣金额',
+  `settle_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '结算金额',
+  `bet_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '总流水（总投注）',
+  `dml_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '打码量',
+  `fee_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '扣款金额',
+  `loseearn_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '总盈亏',
+  `bet_amount_list` json NOT NULL COMMENT '游戏投注列表',
+  `loseearn_amount_list` json NOT NULL COMMENT '盈亏列表',
+  `bkge_list` json NOT NULL COMMENT '游戏返佣列表',
+  `proportion_list` json NOT NULL COMMENT '占成列表(盈亏占比)',
+  `fee_list` json NOT NULL COMMENT '扣款列表',
+  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '1：已发放，0：未发放',
+  `bkge_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '返佣时间',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `udx_date_user_id`(`date`, `user_id`) USING BTREE,
+  INDEX `idx_user_id`(`user_id`) USING BTREE
+) ENGINE = InnoDB  COMMENT = '代理盈亏返佣月记录表' ROW_FORMAT = DYNAMIC;
+
+CREATE TABLE `agent_loseearn_week_bkge`  (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `deal_log_no` bigint(20) UNSIGNED NOT NULL DEFAULT 0 COMMENT '交易流水号(funds_deal_log里的order_number)',
+  `date` date NOT NULL DEFAULT '0000-00-00' COMMENT '日期(统计周最后一天)',
+  `user_id` int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '用户id',
+  `user_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '用户名称',
+  `agent_name` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '上级代理名称',
+  `agent_cnt` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '下级代理人数(与rpt_agent里的一样)',
+  `num` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '注单数目',
+  `active_user_num` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT '下级活跃用户数(有充值和投注)',
+  `bkge` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '返佣金额',
+  `settle_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '结算金额',
+  `bet_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '总流水（总投注）',
+  `dml_amount` decimal(18, 2) UNSIGNED NOT NULL DEFAULT 0.00 COMMENT '打码量',
+  `fee_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '扣款金额',
+  `loseearn_amount` decimal(18, 2) NOT NULL DEFAULT 0.00 COMMENT '总盈亏',
+  `bet_amount_list` json NOT NULL COMMENT '游戏投注列表',
+  `loseearn_amount_list` json NOT NULL COMMENT '盈亏列表',
+  `bkge_list` json NOT NULL COMMENT '游戏返佣列表',
+  `proportion_list` json NOT NULL COMMENT '占成列表(盈亏占比)',
+  `fee_list` json NOT NULL COMMENT '扣款列表',
+  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '1：已发放，0：未发放',
+  `bkge_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '返佣时间',
+  `updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `udx_date_user_id`(`date`, `user_id`) USING BTREE,
+  INDEX `idx_user_id`(`user_id`) USING BTREE
+) ENGINE = InnoDB  COMMENT = '代理盈亏返佣周记录表' ROW_FORMAT = DYNAMIC;

@@ -1,0 +1,31 @@
+
+发版内容：
+1、提现审核优化
+2、代理后台地址配置
+
+一、停用workerman进程
+    messageServer
+    gameOrderServer
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+
+四、更新SQL
+    database/v1.1.2.6.sql
+    database/v1.1.2.6_game.sql
+    database/v1.1.2.6_procedure.sql(存储过程)
+
+
+五、更新redis
+    del system.config.global.key
+    del home:game:pageHot:2022-08-04
+
+六、启动workerman进程
+    messageServer
+    gameOrderServer
+
+七、后台操作

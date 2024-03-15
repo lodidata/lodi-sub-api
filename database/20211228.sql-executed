@@ -1,0 +1,2 @@
+ALTER TABLE `dev_game`.`lottery_info`
+MODIFY COLUMN `period_code_part` char(4) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '''' COMMENT ''开奖结果6-8位'' AFTER `period_code`;

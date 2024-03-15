@@ -1,0 +1,39 @@
+
+发版内容：
+
+
+一、停用workerman进程
+    lodi_super_api  bash stop.sh
+    lodi_sub_api  php gameOrderServer.php stop
+    lodi_sub_api  php messageServer.php stop
+    lodi_sub_api  php gameServer.php stop
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+
+四、更新SQL
+    database/v1.1.2.5.sql
+    database/v1.1.2.5_game.sql
+    database/v1.1.2.5_procedure.sql
+
+
+五、更新redis
+    (1)、子站
+        1、del system.config.global.key
+        2、del game_jump_url
+    （2）、lodi超管
+        1、 lodi_super_api del api_third__game_jump_data
+
+
+六、启动workerman进程
+    lodi_super_api   bash start.sh
+    lodi_sub_api  php gameOrderServer.php start -d
+    lodi_sub_api  php messageServer.php start -d
+    lodi_sub_api  php gameServer.php start -d
+
+七、后台操作
+    更新用户权限

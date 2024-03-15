@@ -1,0 +1,21 @@
+一、停用workerman进程
+    messageServer
+	
+	
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+
+四、更新SQL
+    database/20220608.sql
+
+
+五、更新redis
+	1、del pay_config_list
+	2、del transfer_config_list
+
+六、启动workerman进程
+    messageServer

@@ -1,0 +1,24 @@
+[2018-05-05 12:54:52] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8abe39456f02' for key 'code' (SQL: insert into `user_agent` (`user_id`, `bkge_sport`, `bkge_live`, `bkge_game`, `bkge_lottery`, `uid_agents`, `channel`, `code`, `level`, `created`, `updated`) values (16502, 4000, 3000, 5000, 5000, 16502, 1, 8abe39456f02, 1, 1525496092, 1525496092)) [] {"uid":"cc52749"}
+PHP Notice:  Trying to get property of non-object in /data/www/tcv2/repo/model/User.php on line 90
+PHP Notice:  Trying to get property of non-object in /data/www/tcv2/repo/model/User.php on line 97
+[2018-05-05 13:06:51] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '8abe3d8ed876' for key 'code' (SQL: insert into `user_agent` (`user_id`, `bkge_sport`, `bkge_live`, `bkge_game`, `bkge_lottery`, `uid_agents`, `channel`, `code`, `level`, `created`, `updated`) values (29626, 4000, 3000, 5000, 5000, 29626, 1, 8abe3d8ed876, 1, 1525496811, 1525496811)) [] {"uid":"cc52749"}
+PHP Notice:  Trying to get property of non-object in /data/www/tcv2/repo/model/User.php on line 90
+PHP Notice:  Trying to get property of non-object in /data/www/tcv2/repo/model/User.php on line 97
+[2018-05-05 13:08:56] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6985ab6b-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (31996, LEBO, LEBO子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+[2018-05-05 13:20:22] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '02a411f9-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (43341, AG, AG子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+[2018-05-05 13:24:57] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'a61efdfc-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (47567, 沙巴体育, 沙巴体育子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+[2018-05-05 13:26:27] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'dbdac524-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (48929, 沙巴体育, 沙巴体育子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+[2018-05-05 13:31:50] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '9c59affb-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (53844, AG, AG子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+
+
+
+
+
+
+
+
+
+
+[2018-05-05 13:36:51] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '4fd5a936-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (58269, LEBO, LEBO子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+[2018-05-05 13:37:42] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '6e7cc597-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (59026, 沙巴体育, 沙巴体育子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}
+[2018-05-05 13:42:54] tc-app.ERROR: 注册失败 SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '2877d407-502' for key 'uuid' (SQL: insert into `funds_child` (`pid`, `game_type`, `name`, `uuid`, `balance`, `last_balance`, `status`) values (63436, FG, FG子钱包, uuid(), 0, 0, enabled)) [] {"uid":"cc52749"}

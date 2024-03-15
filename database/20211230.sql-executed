@@ -1,0 +1,4 @@
+ALTER TABLE `dev_game`.`user`
+ADD COLUMN `isVertical` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0：横版，1：竖版用户' AFTER `first_recharge_time`;
+ALTER TABLE `dev_game`.`profile`
+ADD COLUMN `line` varchar(50) NOT NULL DEFAULT '' COMMENT 'line' AFTER `weixin`;

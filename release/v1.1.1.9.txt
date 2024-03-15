@@ -1,0 +1,23 @@
+一、停用workerman进程
+    gameOrderServer
+    messageServer
+	
+	
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+
+四、更新SQL
+	1、/database/v1.1.1.9.sql
+
+
+五、更新redis
+    del system.config.global.key
+	
+六、启动workerman进程
+
+	
+	

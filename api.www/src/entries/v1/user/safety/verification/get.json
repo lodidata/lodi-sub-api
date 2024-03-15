@@ -1,0 +1,22 @@
+{
+    "activepwd": {
+        "id": 1,
+        "status": 1,
+        "value": ""
+    },
+    "mobie": {
+        "id": 2,
+        "status": 1,
+        "value": "****6150"
+    },
+    "email": {
+        "id": 3,
+        "status": 1,
+        "value": "****89@qq.com"
+    },
+    "question": {
+        "id": 4,
+        "status": 1,
+        "value": "我的出生日期？"
+    }
+}

@@ -1,0 +1,2 @@
+#JHPAY代付
+INSERT INTO `transfer_config`( `name`, `balance`, `code`, `ver`, `app_id`, `app_secret`, `sort`, `status`, `key`, `pub_key`, `token`, `terminal`, `partner_id`, `url_notify`, `url_return`, `max_money`, `min_money`, `fee`, `email`, `request_code`, `bank_list`, `request_url`, `pay_callback_domain`, `params`) VALUES ('JHPAY', 0, 'JHPAY', NULL, '0', NULL, 1, 'enabled', '22bcgkkdcb9itiqm712vf4nr92ww0sbl', '22bcgkkdcb9itiqm712vf4nr92ww0sbl', NULL, NULL, '10006', NULL, NULL, 0, 0, 500, NULL, NULL, '{\"Gcash\":\"Gcash\"}', 'http://www.phpay158.com', '', 'null');

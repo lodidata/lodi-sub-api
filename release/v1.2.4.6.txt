@@ -1,0 +1,29 @@
+
+发版内容：
+
+
+一、停用workerman进程
+
+
+
+二、更新代码
+	1、其它站  更新master
+	2、slot 更新 release/new-lucky
+
+三、更新配置
+
+
+四、更新SQL
+    菲版更新
+    database/v1.2.4.6.sql
+    泰版更新
+    database/v1.2.4.6.sql
+    database/v1.2.4.3泰版.sql
+
+五、更新redis
+    del system.config.global.key
+
+六、启动workerman进程
+    泰版  重启 gameOrderServer  gameServer  messageServer
+
+七、后台操作

@@ -1,0 +1,1 @@
+php ../repo/vendor/phpunit/phpunit/phpunit -c phpunit.xml

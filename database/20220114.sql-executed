@@ -1,0 +1,12 @@
+#PNG测试环境
+UPDATE `game_api` SET `orderUrl` = 'https://agastage2.playngonetwork.com:48961/CasinoGameService', `apiUrl` = 'https://agastage2.playngonetwork.com:48961/CasinoGameService?singlewsdl' WHERE `id` = 68;
+#PNG正式环境
+UPDATE `game_api` SET `loginUrl` = 'https://agacw.playngonetwork.com', `orderUrl` = 'https://agaapi.playngonetwork.com:48961/CasinoGameService', `apiUrl` = 'https://agastage2.playngonetwork.com:48961/CasinoGameService' WHERE `id` = 68;
+
+#更新后删除redis del game_api_list
+# del menu.list
+# 先停用再启用 jobs/gameServer.php
+
+#PNG 正式环境
+
+UPDATE `game_api` SET `cagent` = 'qgtapi', `key` = 'AEuqDHOIeCHVBcWUqcgGCPaPy', `apiUrl` = 'https://agastage2.playngonetwork.com:48961/CasinoGameService?singlewsdl' WHERE `id` = 68;

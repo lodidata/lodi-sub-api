@@ -1,0 +1,1 @@
+INSERT INTO `system_config` (`module`, `name`, `type`, `key`, `value`, `desc`, `state`) VALUES ('market', 'h5版本号', 'string', 'h5_version', '', NULL, 'enabled');

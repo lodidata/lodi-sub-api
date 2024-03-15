@@ -1,0 +1,43 @@
+
+发版内容：
+1. 前端快捷金额配置目前支持4个，需增加4个
+2. 限制同Gcash账号，银行卡账号只可绑定一个游戏账号
+3. 注单查询和交易流水板块增加排序功能
+4. 新增--IP限制注册人数
+5. 会员报表，投注情况统计增加“历史总投注”
+6. 运营后台自动登出保护，超过60分钟无任何操作，后台自动登出
+7. 首页数据--7日新增和7日运营新增总兑换
+8. 下线转账新增数据统计
+9. DG游戏接入
+
+
+一、停用workerman进程
+    gameOrderServer
+
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+    'jsonwebtoken' => [
+                'expire' => 3600, //单位：秒
+            ],
+
+四、更新SQL
+    database/v1.1.2.4.sql
+    database/新注册用户兑换数据_存储过程.sql
+
+
+五、更新redis
+1、del system.config.global.key
+2、del home:game:all:2022-07-18(日期)
+3、del game_jump_url
+4、del pay_config_list
+
+六、启动workerman进程
+
+    gameOrderServer
+
+七、后台操作
+    后台重新设置权限

@@ -1,0 +1,2 @@
+
+INSERT INTO system_config(`module`,`name`,`type`,`key`,`value`,`desc`,`state`) VALUES('system','第三方客服VIP','string','kefu_url_vip','',NULL,'enabled'),('system','客服代码VIP','string','kefu_code_vip','',NULL,'enabled');

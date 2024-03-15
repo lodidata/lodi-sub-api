@@ -1,0 +1,1 @@
+update dev_game.user_level set `name` = 'LV1' WHERE id =1;

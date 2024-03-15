@@ -1,0 +1,30 @@
+
+java基础环境 jdk版本 1.8.0_322
+
+
+
+一、停用workerman进程
+    messsageServer
+
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+
+四、更新SQL
+    database/v1.2.5.0.sql
+
+
+
+
+五、更新redis
+    
+
+
+六、启动workerman进程
+    messsageServer
+
+七、后台操作

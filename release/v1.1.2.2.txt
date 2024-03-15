@@ -1,0 +1,40 @@
+
+发版内容：
+1、增加游戏 新增JILI真人游戏 FC增加三款游戏
+2、CQ9游戏接口更新货币字段
+3、支付增加回调域名
+4、代付增加回调域名
+5、转出第三方失败退款，第三成功，网络异常导致失败
+6、游戏增加多语言支付pt-br,vnt等
+
+
+
+
+一、停用workerman进程
+    messsageServer 
+gameOrderServer
+gameServer
+	
+	
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+	
+
+四、更新SQL
+    database/v1.1.2.2.sql
+
+
+五、更新redis
+	del menu:vertical:list
+	del menu:vertical:list:93
+1、del game_jump_url
+2、del system.config.global.key
+3、del pay_config_list
+
+六、启动workerman进程
+    messsageServer 
+gameOrderServer
+gameServer

@@ -1,0 +1,2 @@
+ALTER TABLE `funds_deposit`
+MODIFY COLUMN `active_id_other` int(10) UNSIGNED NULL DEFAULT NULL AFTER `over_time`;

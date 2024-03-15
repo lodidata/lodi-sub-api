@@ -1,0 +1,11 @@
+<?php
+namespace {namespace};
+class {className} extends \BaseApiWWWTestCase
+{
+    public function testRun()
+    {
+        $response = $this->runApp('{method}', '{uri}');
+
+        $this->assertEquals(1, 1);
+    }
+}

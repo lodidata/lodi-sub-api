@@ -1,0 +1,2 @@
+insert into pay_config(`name`,`type`,`partner_id`,`key`,`pub_key`,`payurl`,`ip`,`show_type`,`status`,`sort`,`return_type`,`link_data`,`pay_type`,`params`) values('JHPAY','jhpay','10006','22bcgkkdcb9itiqm712vf4nr92ww0sbl','22bcgkkdcb9itiqm712vf4nr92ww0sbl','http://www.phpay158.com','','h5','enabled',16,'json','','','{}');
+insert into level_online(level_id, pay_plat) values(1,'jhpay'),(2,'jhpay'),(3,'jhpay'),(4,'jhpay'),(5,'jhpay'),(6,'jhpay'),(7,'jhpay'),(8,'jhpay'),(9,'jhpay'),(10,'jhpay'),(11,'jhpay'),(12,'jhpay');

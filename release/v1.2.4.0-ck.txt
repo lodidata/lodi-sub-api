@@ -1,0 +1,2 @@
+安装CK扩展
+composer require smi2/phpclickhouse 1.4.6

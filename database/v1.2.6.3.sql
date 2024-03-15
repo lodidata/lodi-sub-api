@@ -1,0 +1,2 @@
+ALTER TABLE `channel_download` ADD COLUMN `ios` varchar(255) NOT NULL DEFAULT '' COMMENT 'ios包' AFTER `android`;
+ALTER TABLE `app_package` ADD COLUMN `update_type` tinyint(3) UNSIGNED NOT NULL DEFAULT 1  COMMENT '更新类型 1增量更新 2全量更新' AFTER `type`; 

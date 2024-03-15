@@ -1,0 +1,9 @@
+#修改配置
+UPDATE `system_config` SET `name` = 'H5推广地址' WHERE `id` = 19;
+UPDATE `system_config` SET `name` = 'PC推广地址' WHERE `id` = 20;
+
+INSERT INTO `system_config` (`module`, `name`, `type`, `key`, `value`, `desc`, `state`, `updated_at`) VALUES 
+('market', 'H5推广地址2', 'string', 'h5_url_2', 'https://game.caacaya.com/pages/website/index/', NULL, 'enabled', '2022-01-22 15:10:36');
+
+#更新RCB正式配置
+UPDATE `game_api` SET  `lobby` = '{\"LIVE\":{\"minbet\":50,\"maxbet\":30000,\"maxBetSumPerHorse\":30000,\"minorMinbet\":50, \"minorMaxbet\":25000, \"minorMaxBetSumPerHorse\":25000}}', `cagent` = 'tgagp',`key` = 'bOORf8mXiNemNiqO1y2', `orderUrl` = 'https://gcife.usplaynet.com', `apiUrl` = 'https://gciap.usplaynet.com' WHERE `id` = 78;

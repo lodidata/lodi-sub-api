@@ -1,0 +1,1 @@
+insert into system_config(`module`,`name`,`type`,`key`,`value`,`desc`,`state`,`updated_at`) values('recharge','711','bool','direct',0,'1开0关','enabled','2022-08-22 17:21:20'),('recharge','Grab','bool','grabpay',0,'1开0关','enabled','2022-08-22 17:21:20');

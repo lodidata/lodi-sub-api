@@ -1,0 +1,31 @@
+
+
+
+一、停用workerman进程
+
+
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+1.上传默认图片 /vip/
+
+四、更新SQL
+    database/v1.2.7.6.sql
+
+
+五、执行初始化脚本
+    php runBin.php runAgentBkgeLog
+    php runBin.php runAgentBkgeWeekMonth
+    重启messageServer.php
+
+六、更新redis
+    1.set week_award_day_ 1
+
+七、启动workerman进程
+
+
+八、后台操作

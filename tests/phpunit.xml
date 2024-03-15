@@ -1,0 +1,62 @@
+<phpunit bootstrap="bootstrap.php"
+    colors="true">
+<!--     <testsuites>
+        <testsuite name="api.www_old">
+            <directory>api.www_old</directory>
+        </testsuite>
+    </testsuites>
+
+    <testsuites>
+        <testsuite name="api.admin_old">
+            <directory>api.admin_old</directory>
+        </testsuite>
+    </testsuites> -->
+    <testsuite name="lottery">
+        <file>repo/lotteryPlay/ssc/SSCTGTest.php</file>
+    </testsuite>
+<!--<testsuite name="lottery">
+        <file>repo/lotteryPlay/lhc/result/LHCTest.php</file>
+    </testsuite>-->
+<!--   <testsuite name="lottery">
+        <directory>repo/lotteryPlay/lhc/LHCQTest.php</directory>
+    </testsuite>-->
+<!--    <testsuite name="lottery">
+        <directory>repo/lotteryPlay/lhc/LHCSTest.php</directory>
+    </testsuite>-->
+ <!--   <testsuite name="lottery">
+        <directory>repo/lotteryPlay/lhc/LHCRBTest.php</directory>
+    </testsuite>-->
+<!--  
+    <testsuite name="single">
+        <file>repo_old/HashidsTest.php</file>
+    </testsuite> -->
+
+<!--    <testsuite name="single2">
+        <file>repo/lotteryPlay/PrettyTest.php</file>
+    </testsuite>-->
+
+<!--     <testsuite name="struct">
+        <file>repo_old/lotteryPlay/StructTest.php</file>
+    </testsuite> -->
+
+    <!-- 
+    <logging>
+        <log type="coverage-html" target="/Users/tyleryang/mycode/project/tc3ga.com/lottery/report" lowUpperBound="35"
+        highLowerBound="70"/>
+        <log type="coverage-clover" target="/Users/tyleryang/mycode/project/tc3ga.com/lottery/report/coverage.xml"/>
+        <log type="coverage-php" target="/Users/tyleryang/mycode/project/tc3ga.com/lottery/report/coverage.serialized"/>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
+        <log type="junit" target="/Users/tyleryang/mycode/project/tc3ga.com/lottery/report/logfile.xml" logIncompleteSkipped="false"/>
+        <log type="testdox-html" target="/Users/tyleryang/mycode/project/tc3ga.com/lottery/report/testdox.html"/>
+        <log type="testdox-text" target="/Users/tyleryang/mycode/project/tc3ga.com/lottery/report/testdox.txt"/>
+    </logging>
+
+    <filter>
+        <whitelist>
+            <directory>./src</directory>
+            <exclude>
+            </exclude>
+        </whitelist>
+    </filter>
+   -->
+</phpunit>

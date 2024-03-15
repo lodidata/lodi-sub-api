@@ -1,0 +1,23 @@
+一、停用workerman进程
+
+	gameOrderServer
+	
+二、执行代码更新 master
+
+三、执行SQL更新
+
+	文件：/database/v1.1.0.6.sql 
+	
+四、后台上传CQ9图片
+	
+五、清理redis
+	select 1
+	del menu:vertical:list
+	del menu:vertical:list:74
+	del menu:vertical:list:85
+	
+六、启动workerman进程
+
+	1、第一步停用进程
+	
+	

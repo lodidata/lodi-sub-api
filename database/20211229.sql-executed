@@ -1,0 +1,24 @@
+ALTER TABLE `game_api` 
+DROP COLUMN `quit`,
+ADD COLUMN `loginUrl` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '登录地址' AFTER `pub_key`,
+ADD COLUMN `orderUrl` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '拉单地址' AFTER `loginUrl`,
+ADD COLUMN `apiUrl` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT 'api地址' AFTER `orderUrl`,
+ADD COLUMN `lobby` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT '' COMMENT '特殊参数' AFTER `url`;
+
+UPDATE game_api set apiUrl=api;
+UPDATE game_api set apiUrl = SUBSTRING_INDEX(apiUrl,'/',3) WHERE type in ('JOKER', 'EVO','SEXYBCRT');
+
+UPDATE game_api set orderUrl = url WHERE type='EVO';
+UPDATE game_api set loginUrl = url WHERE type='JOKER';
+
+UPDATE game_api set loginUrl = 'https://agastage.playngonetwork.com' WHERE type='PNG';
+UPDATE game_api set orderUrl = url WHERE type='PP';
+UPDATE game_api set orderUrl = url WHERE type='SEXYBCRT';
+update game_api set orderUrl='http://api.sa-rpt.com/api/api.aspx',loginUrl='https://web.sa-globalxns.com/app.aspx',apiUrl='http://api.sa-apisvr.com/api/api.aspx' WHERE type='SA';
+
+UPDATE game_api set lobby='A5668' WHERE type='SA';
+UPDATE game_api set lobby='150901' WHERE type='SEXYBCRT';
+
+ALTER TABLE `game_api` 
+DROP COLUMN `url`,
+DROP COLUMN `api`;

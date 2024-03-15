@@ -1,0 +1,1 @@
+ALTER TABLE `user_agent` ADD COLUMN `direct_reg` tinyint(3) UNSIGNED NULL DEFAULT 0 COMMENT '是否为直推开启后注册，1：是，0：否' AFTER `default_profit_loss_value`;

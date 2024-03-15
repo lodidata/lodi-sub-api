@@ -1,0 +1,20 @@
+一、停用workerman进程
+
+    gameServer.php
+    prizeServer.php
+    messageServer.php
+    gameOrderServer.php
+
+二、执行代码更新 master
+
+三、执行SQL更新
+
+    文件：/database/v1.1.0.5.sql
+         /database/v1.1.0.5存储过程.sql
+
+四、启动workerman进程
+
+    1、第一步停用进程
+
+
+    

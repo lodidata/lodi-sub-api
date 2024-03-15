@@ -1,0 +1,28 @@
+
+发版内容：
+
+
+一、停用workerman进程
+
+
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+ env.setting.website里添加'site_type' => 'mxn'
+
+四、更新SQL
+    database/mxn.sql
+
+
+
+五、更新redis
+
+
+
+六、启动workerman进程
+
+
+七、后台操作

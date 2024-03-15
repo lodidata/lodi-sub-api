@@ -1,0 +1,30 @@
+
+发版内容：
+
+
+一、停用workerman进程
+    messsageServer
+
+
+二、更新代码
+	1、更新master
+
+
+三、更新配置
+
+
+四、更新SQL
+    database/v1.2.4.0.sql
+
+
+
+
+五、更新redis
+    1.set recharge_week_issue_day 1
+    2.set recharge_week_issue_time 04:00:00
+
+
+六、启动workerman进程
+    messsageServer
+
+七、后台操作
